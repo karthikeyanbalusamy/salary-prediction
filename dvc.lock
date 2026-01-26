@@ -1,0 +1,33 @@
+schema: '2.0'
+stages:
+  validate:
+    cmd: python src/data_validation.py
+    deps:
+    - path: data/raw/salary.csv
+      hash: md5
+      md5: a266fdde8d8ee43d010233cc66d4a826
+      size: 664
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+    - path: data/raw/salary.csv
+      hash: md5
+      md5: a266fdde8d8ee43d010233cc66d4a826
+      size: 664
+    outs:
+    - path: data/processed/clean.csv
+      hash: md5
+      md5: 034a8bc42e1d7b2657aeaa9763a00387
+      size: 523
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/clean.csv
+      hash: md5
+      md5: 034a8bc42e1d7b2657aeaa9763a00387
+      size: 523
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 8e6062d3803b84f768c2ec186f62567a
+      size: 833
