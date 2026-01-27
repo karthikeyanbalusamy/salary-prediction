@@ -2,3 +2,4 @@
     remote = myremote
 ['remote "myremote"']
     url = s3://kb-ml-bucket
+    region = ap-south-1

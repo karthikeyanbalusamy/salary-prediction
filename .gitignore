@@ -4,3 +4,4 @@ __pycache__/
 mlflow.db
 mlruns/
 **/mlruns/
+salary_pred_venv/
