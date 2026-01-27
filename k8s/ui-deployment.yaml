@@ -17,6 +17,9 @@ spec:
         image: karthikeyanbalusami/ui:latest
         ports:
         - containerPort: 8501
+        env:
+        - name: API_URL
+          value: "http://karthik-api-svc:8000/predict"  
 ---
 apiVersion: v1
 kind: Service

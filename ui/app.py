@@ -1,8 +1,12 @@
 import streamlit as st
 import requests
+import os
 
 # When running locally
-API_URL = "http://karthik-api-svc:8000/predict"
+API_URL = os.getenv(
+    "API_URL",
+    "http://localhost:8000/predict"  # default for local / EC2
+)
 
 st.title("Salary Prediction App")
 

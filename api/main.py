@@ -30,4 +30,4 @@ def predict(yr_exp: float):
     X = np.array([[yr_exp]])
     salary = model.predict(X)[0]
     return {"Years_Experience": yr_exp,
-            "Predicted Salary":float(salary)}
+            "predicted_salary":float(salary)}
