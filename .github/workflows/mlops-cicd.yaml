@@ -59,5 +59,3 @@ jobs:
       run: |
        kubectl --kubeconfig=/home/devopsadmin/.kube/config apply -f k8s/api-deployment.yaml
        kubectl --kubeconfig=/home/devopsadmin/.kube/config apply -f k8s/ui-deployment.yaml
-        # kubectl apply -f k8s/api-deployment.yaml
-        # kubectl apply -f k8s/ui-deployment.yaml
