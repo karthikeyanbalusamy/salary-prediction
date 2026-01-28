@@ -55,13 +55,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup kubectl
-      run: |
-        mkdir -p ~/.kube
-        echo "${{ secrets.KUBECONFIG_DATA }}" > ~/.kube/config
-
-
     - name: Deploy to Kubernetes
+      env:
+        KUBECONFIG: /home/devopsadmin/.kube/config
       run: |
         kubectl apply -f k8s/api-deployment.yaml
         kubectl apply -f k8s/ui-deployment.yaml
