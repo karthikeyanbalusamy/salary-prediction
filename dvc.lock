@@ -24,7 +24,7 @@ stages:
     deps:
     - path: data/processed/clean.csv
       hash: md5
-      md5: 034a8bc42e1d7b2657aeaa9763a00387
+      md5: feeb907440eda726eb2950744b0b9f30
       size: 523
     outs:
     - path: models/model.pkl
