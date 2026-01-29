@@ -10,6 +10,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 S3_BUCKET = "kb-ml-bucket"
 S3_KEY = "latest/model.pkl"
 
+mlflow.set_tracking_uri("file://" + os.path.abspath("mlruns"))
 
 df = pd.read_csv("data/processed/clean.csv")
 X = df[['YearsExperience']]
