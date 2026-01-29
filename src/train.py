@@ -12,6 +12,7 @@ S3_BUCKET = "kb-ml-bucket"
 S3_KEY = "latest/model.pkl"
 
 mlflow.set_tracking_uri("file://" + os.path.abspath("mlruns"))
+mlflow.set_experiment("salary_prediction")
 
 df = pd.read_csv("data/processed/clean.csv")
 X = df[['YearsExperience']]
